@@ -1,11 +1,11 @@
 import express from "express";
 import bodyParser from "body-parser";
-
+var cors = require("cors");
 import buyContentRoute from "./routes/buyContent.js";
 import rentContentRoute from "./routes/rentContent.js";
 
 const app = express();
-
+app.use(cors());
 const PORT = 5000;
 
 app.use(bodyParser.json());
