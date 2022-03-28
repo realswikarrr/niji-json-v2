@@ -17,4 +17,6 @@ app.get("/", (req, res) => {
   res.send("Hello From Homepage");
 });
 
-app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+app.listen(process.env.PORT || PORT, () =>
+  console.log(`Server started on port ${PORT}`)
+);
